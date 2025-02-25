@@ -4,6 +4,78 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "result[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[6]",
+					"strict" : false
+				},
+				{
 					"name" : "done",
 					"strict" : false
 				},
@@ -12,7 +84,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "load",
+					"strict" : false
+				},
+				{
+					"name" : "aIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "aIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "aIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bIn[2]",
 					"strict" : false
 				}
 			]
