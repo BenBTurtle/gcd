@@ -1,0 +1,12 @@
+module (input clk,
+input reset,
+input load,
+input [4:0] a,
+input [4:0] b,
+output [4:0] result,
+output [7:0] disp1,
+output [7:0] disp2);
+
+
+
+endmodule

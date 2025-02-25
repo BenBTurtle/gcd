@@ -1,0 +1,3 @@
+﻿  GCD.cpp
+C:\Users\benbt\Desktop\Comp_eng_lab_2\Lab_Mats\Activity_4b\C_approach\GCD\GCD\GCD.cpp(37,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  GCD.vcxproj -> C:\Users\benbt\Desktop\Comp_eng_lab_2\Lab_Mats\Activity_4b\C_approach\GCD\x64\Debug\GCD.exe

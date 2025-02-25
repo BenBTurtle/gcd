@@ -1,0 +1,9 @@
+module max(input [4:0] a,
+input [4:0] b,
+output [4:0] maxNum);
+
+always@(*) begin
+	maxNum <= (a>b)? a : b;
+end
+endmodule
+
