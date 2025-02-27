@@ -24,40 +24,40 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:53:19 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v 
+# Start time: 23:39:26 on Feb 26,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v 
 # -- Compiling module gcd
 # -- Compiling module gcd_TB
 # 
 # Top level modules:
 # 	gcd_TB
-# End time: 18:53:19 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 23:39:26 on Feb 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b {C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Benjamin\ Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd {C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 18:53:19 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b" C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v 
-# -- Compiling module max
-# -- Compiling module min
+# Start time: 23:39:26 on Feb 26,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd" C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v 
+# -- Compiling module fiveBitSevenSegmentDecoder
 # 
 # Top level modules:
-# 	max
-# 	min
-# End time: 18:53:20 on Feb 24,2025, Elapsed time: 0:00:01
+# 	fiveBitSevenSegmentDecoder
+# End time: 23:39:26 on Feb 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim -voptargs=+acc work.gcd_TB
 # vsim -voptargs="+acc" work.gcd_TB 
-# Start time: 18:53:24 on Feb 24,2025
+# Start time: 23:39:33 on Feb 26,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading work.gcd_TB(fast)
 # Loading work.gcd(fast)
-# Loading work.min(fast)
-# Loading work.max(fast)
+# Loading work.fiveBitSevenSegmentDecoder(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 10, found 9.
+#    Time: 0 ns  Iteration: 0  Instance: /gcd_TB/DUT File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 86
+# ** Warning: (vsim-3722) C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v(86): [TFMPC] - Missing connection for port 'debug'.
 add wave -position end  sim:/gcd_TB/clk
 add wave -position end  sim:/gcd_TB/reset
 add wave -position end  sim:/gcd_TB/load
@@ -65,10 +65,11 @@ add wave -position end  sim:/gcd_TB/aIn
 add wave -position end  sim:/gcd_TB/bIn
 add wave -position end  sim:/gcd_TB/result
 add wave -position end  sim:/gcd_TB/done
-add wave -position end  sim:/gcd_TB/disp
+add wave -position end  sim:/gcd_TB/disp0
+add wave -position end  sim:/gcd_TB/disp1
 run -all
-# ** Note: $stop    : C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v(85)
-#    Time: 50 ns  Iteration: 0  Instance: /gcd_TB
-# Break in Module gcd_TB at C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v line 85
-# End time: 18:54:16 on Feb 24,2025, Elapsed time: 0:00:52
-# Errors: 0, Warnings: 1
+# ** Note: $stop    : C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v(116)
+#    Time: 724 ns  Iteration: 0  Instance: /gcd_TB
+# Break in Module gcd_TB at C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v line 116
+# End time: 23:40:28 on Feb 26,2025, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 3

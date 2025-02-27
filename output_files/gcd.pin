@@ -193,7 +193,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :      
 GND                          : D11       : gnd    :                   :         :           :                
 aIn[2]                       : D12       : input  : 3.3-V LVTTL       :         : 7         : Y              
 result[4]                    : D13       : output : 3.3-V LVTTL       :         : 7         : Y              
-debug                        : D14       : output : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
 disp0[7]                     : D15       : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : D16       : gnd    :                   :         :           :                
 disp0[5]                     : D17       : output : 3.3-V LVTTL       :         : 7         : Y              

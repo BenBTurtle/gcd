@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gcd
-Tue Feb 25 16:19:52 2025
+Wed Feb 26 23:47:16 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -45,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 25 16:19:52 2025          ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 26 23:47:16 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; gcd                                            ;
 ; Top-level Entity Name              ; gcd                                            ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 76                                             ;
-;     Total combinational functions  ; 76                                             ;
+; Total logic elements               ; 83                                             ;
+;     Total combinational functions  ; 83                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 36                                             ;
+; Total pins                         ; 35                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -155,27 +155,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 32          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
-; gcd.v                            ; yes             ; User Verilog HDL File  ; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v                    ;         ;
-; decSevenSegmentDecoder.v         ; yes             ; User Verilog HDL File  ; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/decSevenSegmentDecoder.v ;         ;
-; maxAndMin.v                      ; yes             ; User Verilog HDL File  ; C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v              ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; gcd.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v                    ;         ;
+; decSevenSegmentDecoder.v         ; yes             ; User Verilog HDL File  ; C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -183,30 +182,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 76              ;
+; Estimated Total logic elements              ; 83              ;
 ;                                             ;                 ;
-; Total combinational functions               ; 76              ;
+; Total combinational functions               ; 83              ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 39              ;
-;     -- 3 input functions                    ; 30              ;
-;     -- <=2 input functions                  ; 7               ;
+;     -- 4 input functions                    ; 43              ;
+;     -- 3 input functions                    ; 34              ;
+;     -- <=2 input functions                  ; 6               ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 68              ;
+;     -- normal mode                          ; 75              ;
 ;     -- arithmetic mode                      ; 8               ;
 ;                                             ;                 ;
 ; Total registers                             ; 0               ;
 ;     -- Dedicated logic registers            ; 0               ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 36              ;
+; I/O pins                                    ; 35              ;
 ;                                             ;                 ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; result[2]$latch ;
 ; Maximum fan-out                             ; 15              ;
-; Total fan-out                               ; 315             ;
-; Average fan-out                             ; 2.13            ;
+; Total fan-out                               ; 340             ;
+; Average fan-out                             ; 2.22            ;
 +---------------------------------------------+-----------------+
 
 
@@ -215,10 +214,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name                ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------------+--------------+
-; |gcd                                           ; 76 (45)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 36   ; 0            ; 0          ; |gcd                                           ; gcd                        ; work         ;
+; |gcd                                           ; 83 (64)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |gcd                                           ; gcd                        ; work         ;
 ;    |fiveBitSevenSegmentDecoder:displayResults| ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |gcd|fiveBitSevenSegmentDecoder:displayResults ; fiveBitSevenSegmentDecoder ; work         ;
-;    |max:maout|                                 ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |gcd|max:maout                                 ; max                        ; work         ;
-;    |min:m|                                     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |gcd|min:m                                     ; min                        ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,17 +231,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; result[3]$latch                                     ; comb                ; yes                    ;
 ; result[4]$latch                                     ; comb                ; yes                    ;
 ; done$latch                                          ; GND                 ; yes                    ;
-; b[0]                                                ; Mux1                ; yes                    ;
+; b[0]                                                ; Mux2                ; yes                    ;
 ; a[0]                                                ; Mux7                ; yes                    ;
-; b[4]                                                ; Mux1                ; yes                    ;
+; b[4]                                                ; Mux2                ; yes                    ;
 ; a[4]                                                ; Mux7                ; yes                    ;
-; b[3]                                                ; Mux1                ; yes                    ;
+; b[3]                                                ; Mux2                ; yes                    ;
 ; a[3]                                                ; Mux7                ; yes                    ;
-; b[2]                                                ; Mux1                ; yes                    ;
+; b[2]                                                ; Mux2                ; yes                    ;
 ; a[2]                                                ; Mux7                ; yes                    ;
-; b[1]                                                ; Mux1                ; yes                    ;
+; b[1]                                                ; Mux2                ; yes                    ;
 ; a[1]                                                ; Mux7                ; yes                    ;
-; Number of user-specified and inferred latches = 16  ;                     ;                        ;
+; mOut[0]                                             ; Decoder0            ; yes                    ;
+; mOut[1]                                             ; Decoder0            ; yes                    ;
+; mOut[2]                                             ; Decoder0            ; yes                    ;
+; mOut[3]                                             ; Decoder0            ; yes                    ;
+; mOut[4]                                             ; Decoder0            ; yes                    ;
+; Number of user-specified and inferred latches = 21  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -279,19 +281,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 36                          ;
-; cycloneiii_lcell_comb ; 79                          ;
+; boundary_port         ; 35                          ;
+; cycloneiii_lcell_comb ; 86                          ;
 ;     arith             ; 8                           ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 71                          ;
+;     normal            ; 78                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 39                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.23                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -310,109 +312,100 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Feb 25 16:19:45 2025
+    Info: Processing started: Wed Feb 26 23:47:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gcd -c gcd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file gcd.v
-    Info (12023): Found entity 1: gcd File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 1
-    Info (12023): Found entity 2: gcd_TB File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 69
+    Info (12023): Found entity 1: gcd File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 1
+    Info (12023): Found entity 2: gcd_TB File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 73
 Info (12021): Found 1 design units, including 1 entities, in source file decsevensegmentdecoder.v
-    Info (12023): Found entity 1: fiveBitSevenSegmentDecoder File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/decSevenSegmentDecoder.v Line: 1
+    Info (12023): Found entity 1: fiveBitSevenSegmentDecoder File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file maxandmin.v
-    Info (12023): Found entity 1: max File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v Line: 1
-    Info (12023): Found entity 2: min File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v Line: 10
+    Info (12023): Found entity 1: max File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/maxAndMin.v Line: 1
+    Info (12023): Found entity 2: min File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/maxAndMin.v Line: 10
 Info (12127): Elaborating entity "gcd" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(21): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(23): variable "mOut" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(24): variable "resCheck" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(25): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(26): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 26
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(29): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(29): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(30): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(30): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(31): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 31
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(33): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 33
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(34): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(34): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(44): variable "aIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 44
-Warning (10235): Verilog HDL Always Construct warning at gcd.v(45): variable "bIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 45
-Warning (10240): Verilog HDL Always Construct warning at gcd.v(19): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at gcd.v(19): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at gcd.v(19): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (10240): Verilog HDL Always Construct warning at gcd.v(19): inferring latch(es) for variable "done", which holds its previous value in one or more paths through the always construct File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (10034): Output port "debug" at gcd.v(10) has no driver File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 10
-Info (10041): Inferred latch for "done" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "b[0]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "b[1]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "b[2]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "b[3]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "b[4]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "a[0]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "a[1]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "a[2]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "a[3]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "a[4]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "result[0]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "result[1]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "result[2]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "result[3]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (10041): Inferred latch for "result[4]" at gcd.v(19) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Info (12128): Elaborating entity "min" for hierarchy "min:m" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 16
-Info (12128): Elaborating entity "max" for hierarchy "max:maout" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 17
-Info (12128): Elaborating entity "fiveBitSevenSegmentDecoder" for hierarchy "fiveBitSevenSegmentDecoder:displayResults" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 64
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(24): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(26): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(26): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(27): variable "mOut" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(28): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(28): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(31): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(31): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(33): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(33): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(37): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(37): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(48): variable "aIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 48
+Warning (10235): Verilog HDL Always Construct warning at gcd.v(49): variable "bIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 49
+Warning (10240): Verilog HDL Always Construct warning at gcd.v(22): inferring latch(es) for variable "mOut", which holds its previous value in one or more paths through the always construct File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at gcd.v(22): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at gcd.v(22): inferring latch(es) for variable "done", which holds its previous value in one or more paths through the always construct File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at gcd.v(22): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at gcd.v(22): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "b[0]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "b[1]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "b[2]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "b[3]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "b[4]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "a[0]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "a[1]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "a[2]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "a[3]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "a[4]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "done" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "result[0]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "result[1]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "result[2]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "result[3]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "result[4]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "mOut[0]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "mOut[1]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "mOut[2]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "mOut[3]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (10041): Inferred latch for "mOut[4]" at gcd.v(22) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+Info (12128): Elaborating entity "fiveBitSevenSegmentDecoder" for hierarchy "fiveBitSevenSegmentDecoder:displayResults" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 68
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276013): RAM logic "fiveBitSevenSegmentDecoder:displayResults|Ram1" is uninferred because MIF is not supported for the selected family File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/decSevenSegmentDecoder.v Line: 11
-    Info (276013): RAM logic "fiveBitSevenSegmentDecoder:displayResults|Ram0" is uninferred because MIF is not supported for the selected family File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/decSevenSegmentDecoder.v Line: 11
-Warning (13012): Latch result[0]$latch has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[0] File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (13012): Latch result[1]$latch has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[1] File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (13012): Latch result[2]$latch has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[2] File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (13012): Latch result[3]$latch has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[3] File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (13012): Latch result[4]$latch has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal b[4] File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch b[1] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
-Warning (13012): Latch a[1] has unsafe behavior File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
+    Info (276013): RAM logic "fiveBitSevenSegmentDecoder:displayResults|Ram1" is uninferred because MIF is not supported for the selected family File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v Line: 11
+    Info (276013): RAM logic "fiveBitSevenSegmentDecoder:displayResults|Ram0" is uninferred because MIF is not supported for the selected family File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v Line: 11
+Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch b[1] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
+Warning (13012): Latch a[1] has unsafe behavior File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 22
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "disp0[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 7
-    Warning (13410): Pin "disp1[1]" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 8
-    Warning (13410): Pin "disp1[7]" is stuck at VCC File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 8
-    Warning (13410): Pin "debug" is stuck at GND File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 10
+    Warning (13410): Pin "disp0[7]" is stuck at VCC File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 7
+    Warning (13410): Pin "disp1[1]" is stuck at GND File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 8
+    Warning (13410): Pin "disp1[7]" is stuck at VCC File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 1
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 1
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 76 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Tue Feb 25 16:19:52 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 83 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Wed Feb 26 23:47:16 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:11
 
 

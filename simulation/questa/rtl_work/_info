@@ -10,113 +10,90 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/simulation/questa
+Z1 dC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/simulation/questa
 T_opt
-!s110 1740441205
-V7m^GM4VUYW5>L@2c4gj5?2
+!s110 1740631174
+VCgeE87RYeicd4j36DS^5e1
 04 6 4 work gcd_TB fast 0
-=1-e4a8dff707cd-67bd0675-69-5564
+=1-9c6b0004a85d-67bfec85-33f-4360
 R0
 !s12b OEM100
-!s124 OEM10U4 
+!s124 OEM10U3 
 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
-vgcd
-Z3 2C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v
-Z4 !s110 1740441199
+vfiveBitSevenSegmentDecoder
+2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v
+Z3 !s110 1740631166
 !i10b 1
-!s100 ZUl=n4nlTM2l1@oeV@CP93
-IZ74RnR9Kg_jfl1?Ol7AZO1
+!s100 <z64bfX]LJ?>T=2ddbBNR2
+IfK;l;^bAT_Im12S<@MCPi3
 R1
-Z5 w1740441169
-Z6 8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v
-Z7 FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v
-!i122 0
-L0 1 61
-Z8 VDg1SIo80bB@j0V0VzS_@n1
-Z9 OL;L;2023.3;77
+w1740621060
+8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v
+FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v
+!i122 1
+L0 1 51
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z10 !s108 1740441199.000000
-Z11 !s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v|
-Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v|
+Z6 !s108 1740631166.000000
+!s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v|
 !i113 0
-Z13 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z14 !s92 -vlog01compat -work work +incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+nfive@bit@seven@segment@decoder
+vgcd
+Z9 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
+R3
+!i10b 1
+!s100 7E20bPAGh5jYDn08_2zdL2
+ISoUX5gN><dOOQ`mCjeNc=2
+R1
+Z10 w1740631026
+Z11 8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
+Z12 FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
+!i122 0
+L0 1 74
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z13 !s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v|
+Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v|
+!i113 0
+R7
+R8
 R2
 vgcd_TB
-R3
-R4
-!i10b 1
-!s100 dEJN:g@P7AN@44[DHLdkG1
-IV;7:ONz4_k`eik?_?8YO^3
-R1
-R5
-R6
-R7
-!i122 0
-L0 64 25
-R8
 R9
-r1
-!s85 0
-31
+R3
+!i10b 1
+!s100 Y42[6TA8P3baglkCkB9dl2
+IHJ3^Udg:DU]o@>iodn0X=3
+R1
 R10
 R11
 R12
-!i113 0
+!i122 0
+L0 77 43
+R4
+R5
+r1
+!s85 0
+31
+R6
 R13
 R14
+!i113 0
+R7
+R8
 R2
 ngcd_@t@b
-vmax
-Z15 2C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v
-Z16 !s110 1740441200
-!i10b 1
-!s100 D`;Vj@iVQ=S@99RXEAW>81
-Ij7E:h4ahKa]eC8<<cUXVW3
-R1
-Z17 w1740431853
-Z18 8C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v
-Z19 FC:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v
-!i122 1
-L0 1 8
-R8
-R9
-r1
-!s85 0
-31
-R10
-Z20 !s107 C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v|
-Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b|C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/maxAndMin.v|
-!i113 0
-R13
-R14
-R2
-vmin
-R15
-R16
-!i10b 1
-!s100 0e23SXo<^PAGmiAj040T50
-Iz=TInmUZU;a_e56NjD1Zm0
-R1
-R17
-R18
-R19
-!i122 1
-L0 10 8
-R8
-R9
-r1
-!s85 0
-31
-R10
-R20
-R21
-!i113 0
-R13
-R14
-R2
