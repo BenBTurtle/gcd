@@ -1,5 +1,5 @@
 Fitter report for gcd
-Thu Feb 27 14:35:07 2025
+Thu Feb 27 15:35:08 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Feb 27 14:35:07 2025          ;
+; Fitter Status                      ; Successful - Thu Feb 27 15:35:08 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; gcd                                            ;
 ; Top-level Entity Name              ; gcd                                            ;
@@ -150,15 +150,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 32          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.4%      ;
+;     Processors 2-8         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/output_files/gcd.pin.
+The pin-out file can be found in C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/output_files/gcd.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1356,7 +1356,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 32 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device 10M50DAF484C7G for design "gcd"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1395,7 +1395,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 1
+Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 1
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1414,39 +1414,39 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 13 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 1
-    Info (169178): Pin load uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 3
-    Info (169178): Pin reset uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 2
-    Info (169178): Pin aIn[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 4
-    Info (169178): Pin bIn[0] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 5
-    Info (169178): Pin aIn[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 4
-    Info (169178): Pin aIn[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 4
-    Info (169178): Pin bIn[3] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 5
-    Info (169178): Pin bIn[4] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 5
-    Info (169178): Pin aIn[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 4
-    Info (169178): Pin bIn[1] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 5
-    Info (169178): Pin aIn[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 4
-    Info (169178): Pin bIn[2] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v Line: 5
-Info (144001): Generated suppressed messages file C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/output_files/gcd.fit.smsg
+    Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at P11 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 1
+    Info (169178): Pin load uses I/O standard 3.3 V Schmitt Trigger at A7 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 3
+    Info (169178): Pin reset uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 2
+    Info (169178): Pin aIn[0] uses I/O standard 3.3-V LVTTL at C10 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 4
+    Info (169178): Pin bIn[0] uses I/O standard 3.3-V LVTTL at B12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 5
+    Info (169178): Pin aIn[4] uses I/O standard 3.3-V LVTTL at A12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 4
+    Info (169178): Pin aIn[3] uses I/O standard 3.3-V LVTTL at C12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 4
+    Info (169178): Pin bIn[3] uses I/O standard 3.3-V LVTTL at B14 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 5
+    Info (169178): Pin bIn[4] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 5
+    Info (169178): Pin aIn[1] uses I/O standard 3.3-V LVTTL at C11 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 4
+    Info (169178): Pin bIn[1] uses I/O standard 3.3-V LVTTL at A13 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 5
+    Info (169178): Pin aIn[2] uses I/O standard 3.3-V LVTTL at D12 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 4
+    Info (169178): Pin bIn[2] uses I/O standard 3.3-V LVTTL at A14 File: C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/gcd.v Line: 5
+Info (144001): Generated suppressed messages file C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/output_files/gcd.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 6608 megabytes
-    Info: Processing ended: Thu Feb 27 14:35:07 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 5921 megabytes
+    Info: Processing ended: Thu Feb 27 15:35:08 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/output_files/gcd.fit.smsg.
+The suppressed messages can be found in C:/Users/benbt/Desktop/Comp_eng_lab_2/Lab_Mats/Activity_4b/output_files/gcd.fit.smsg.
 
 
