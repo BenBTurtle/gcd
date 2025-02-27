@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/simulation/questa
 T_opt
-!s110 1740631174
-VCgeE87RYeicd4j36DS^5e1
+!s110 1740684927
+V@G^I1BJiE_jmHVmA;S?MI2
 04 6 4 work gcd_TB fast 0
-=1-9c6b0004a85d-67bfec85-33f-4360
+=1-9c6b0004a85d-67c0be7f-eb-378c
 R0
 !s12b OEM100
 !s124 OEM10U3 
@@ -25,7 +25,7 @@ n@_opt
 OL;O;2023.3;77
 vfiveBitSevenSegmentDecoder
 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v
-Z3 !s110 1740631166
+Z3 !s110 1740684923
 !i10b 1
 !s100 <z64bfX]LJ?>T=2ddbBNR2
 IfK;l;^bAT_Im12S<@MCPi3
@@ -40,7 +40,7 @@ Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z6 !s108 1740631166.000000
+Z6 !s108 1740684923.000000
 !s107 C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd|C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/decSevenSegmentDecoder.v|
 !i113 0
@@ -52,14 +52,14 @@ vgcd
 Z9 2C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
 R3
 !i10b 1
-!s100 7E20bPAGh5jYDn08_2zdL2
-ISoUX5gN><dOOQ`mCjeNc=2
+!s100 ESYd4]355mg:YGI]AI_bO1
+IWOk0RCE^K0nN>:gdLa0V62
 R1
-Z10 w1740631026
+Z10 w1740684896
 Z11 8C:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
 Z12 FC:/Users/Benjamin Betancourt/Desktop/Comp_Eng_Design_Lab_2/Activity_4b/gcd/gcd.v
 !i122 0
-L0 1 74
+L0 1 78
 R4
 R5
 r1
@@ -76,14 +76,14 @@ vgcd_TB
 R9
 R3
 !i10b 1
-!s100 Y42[6TA8P3baglkCkB9dl2
-IHJ3^Udg:DU]o@>iodn0X=3
+!s100 jj3Y>Szz?YoNXJ?V[ii^A0
+Ib3nl^6Z1egJJ12?E::enf2
 R1
 R10
 R11
 R12
 !i122 0
-L0 77 43
+L0 81 43
 R4
 R5
 r1

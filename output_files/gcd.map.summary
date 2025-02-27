@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Feb 26 23:47:16 2025
+Analysis & Synthesis Status : Successful - Thu Feb 27 14:35:01 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : gcd
 Top-level Entity Name : gcd
 Family : MAX 10
-Total logic elements : 83
-    Total combinational functions : 83
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 65
+    Total combinational functions : 65
+    Dedicated logic registers : 21
+Total registers : 21
 Total pins : 35
 Total virtual pins : 0
 Total memory bits : 0

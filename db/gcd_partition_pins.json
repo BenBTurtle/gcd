@@ -80,11 +80,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "load",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
 					"strict" : false
 				},
 				{

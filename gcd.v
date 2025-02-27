@@ -19,23 +19,27 @@ initial begin
 	b <= 5'b00000;
 end
 	
-always@ (clk) begin
+always@ (posedge clk) begin
 
-	case(state)
+	case(state) //State dictates what the circuit does "11" the case when neither reset or set button is pressed
 		2'b11 : begin
 			mOut <= (a<b)? a : b; //min module translated to a statement synthesisable in an always statement
-			if (mOut == 5'b00000) begin
+			if (mOut == 5'b00000) begin //checks for a minimum result of 0
 				result <= (a>b)? a : b; //max module translated to a statement synthesisable in an always statement
-				done <= 1'b1;
+				done <= 1'b1; //operation done
+				a <= a; //intentional latch generation
+				b <= b; //intentional latch generation
 			end else begin
 				if (a>=b) begin
-				
 					a <= a-b;
-					
+					b <= b; //Intentional latch generation
+					done <= 1'b0;
+					result <= result; //Intentional latch generation
 				end else begin
-					
+					a <= a; //intentional latch generation
 					b <= b-a;
-					
+					done <= 1'b0;
+					result <= result; //Intentional latch generation
 				end
 			end
 		end
@@ -43,21 +47,25 @@ always@ (clk) begin
 			a <= 5'b00000;
 			b <= 5'b00000; 
 			done <= 1'b0;
+			result <= 5'b00000;
 		end
 		2'b10 : begin
 			a <= aIn;
 			b <= bIn;
 			done <= 1'b0;
+			result <= result; //Intentional latch generation
 		end
 		2'b00 : begin
 			a <= 5'b00000;
 			b <= 5'b00000;
 			done <= 1'b0;
+			result <= 5'b00000;
 		end
 		default : begin
 			a <= 5'b00000;
 			b <= 5'b00000;
 			done <= 1'b0;
+			result <= result; //Intentional latch generation
 		end	
 	endcase
 	
